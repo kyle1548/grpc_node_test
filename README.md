@@ -10,3 +10,10 @@ $ cd build
 $ cmake .. -DCMAKE_PREFIX_PATH=$HOME/corgi_ws/install
 $ make -j16
 ```
+
+# run
+```
+$ grpccore      // terminal 1
+$ ./DataPubTest // terminal 2 (run in the build file)
+$ ./DataSubTest // terminal 3 (run in the build file)
+```
