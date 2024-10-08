@@ -17,3 +17,5 @@ $ grpccore      // terminal 1
 $ ./DataPubTest // terminal 2 (run in the build file)
 $ ./DataSubTest // terminal 3 (run in the build file)
 ```
+Here **DataPubTest** publish command and state of motor and power of the robot, where for now the values are assigned with constant initial values and increasing with increment for each publish.
+**DataSubTest** subscribe all topics  **DataPubTest** published and print out the values it recieved.
