@@ -17,5 +17,5 @@ $ grpccore      // terminal 1
 $ ./DataPubTest // terminal 2 (run in the build file)
 $ ./DataSubTest // terminal 3 (run in the build file)
 ```
-Here ***DataPubTest*** publish command/state of motor/power of the robot. For now, the values of command/state are assigned with constant initial values and increase by constant increments after each publish.  
+Here ***DataPubTest*** publish command/state of both motor and power of the robot. For now, the values of command/state are assigned with constant initial values and increase by constant increments after each publish.  
 ***DataSubTest*** subscribe to all topics published by ***DataPubTest*** and print out the values it received.
