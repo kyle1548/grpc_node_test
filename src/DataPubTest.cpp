@@ -102,7 +102,20 @@ int main() {
         power_state.set_i_2(i);
         power_state.set_v_3(v);
         power_state.set_i_3(i);
-        /*...*/
+        power_state.set_v_4(v);
+        power_state.set_i_4(i);
+        power_state.set_v_5(v);
+        power_state.set_i_5(i);
+        power_state.set_v_6(v);
+        power_state.set_i_6(i);
+        power_state.set_v_7(v);
+        power_state.set_i_7(i);
+        power_state.set_v_8(v);
+        power_state.set_i_8(i);
+        power_state.set_v_9(v);
+        power_state.set_i_9(i);
+        power_state.set_v_10(v);
+        power_state.set_i_10(i);
         power_state.set_v_11(v);
         power_state.set_i_11(v);
         v += 0.5;
@@ -121,7 +134,7 @@ int main() {
         // Using time //
         const auto diff = std::chrono::steady_clock::now() - start;
         std::cout << std::chrono::duration<double>(diff).count() << " seconds\n\n";
-	std::cout << rate.sleep() << " << sleep" << "\n";
+	    std::cout << rate.sleep() << " << sleep" << "\n";
     }
     return 0;
 }
