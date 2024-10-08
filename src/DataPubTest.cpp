@@ -121,7 +121,7 @@ int main() {
         // Using time //
         const auto diff = std::chrono::steady_clock::now() - start;
         std::cout << std::chrono::duration<double>(diff).count() << " seconds\n\n";
-	    std::cout << rate.sleep() << "\n";
+	std::cout << rate.sleep() << " << sleep" << "\n";
     }
     return 0;
 }
