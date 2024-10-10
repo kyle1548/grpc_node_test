@@ -3,10 +3,10 @@
 #     message(FATAL_ERROR "Not found Motor_proto library")
 # endif()
 
-# find_library(POWER_PROTO_LIB Power_proto)
-# if (NOT POWER_PROTO_LIB)
-#     message(FATAL_ERROR "Not found Power_proto library")
-# endif()
+find_library(GRPC_PROTO_LIB grpc_proto_lib)
+if (NOT GRPC_PROTO_LIB)
+    message(FATAL_ERROR "Not found GRPC_PROTO Library.")
+endif()
 
 add_executable(DataPubTest DataPubTest.cpp)
 target_link_libraries(DataPubTest ${_CORE_LIBRARIES} grpc_proto_lib)
