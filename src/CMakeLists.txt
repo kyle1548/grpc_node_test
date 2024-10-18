@@ -8,3 +8,9 @@ target_link_libraries(DataPubTest ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
 
 add_executable(DataSubTest DataSubTest.cpp)
 target_link_libraries(DataSubTest ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
+
+add_executable(CmdSubTest CmdSubTest.cpp)
+target_link_libraries(CmdSubTest ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
+
+add_executable(StatePubTest StatePubTest.cpp)
+target_link_libraries(StatePubTest ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
