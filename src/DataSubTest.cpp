@@ -75,10 +75,10 @@ int main() {
     // Subscriber //
     core::NodeHandler nh;
     core::Rate rate(1000);
-    core::Subscriber<motor_msg::MotorCmdStamped> &sub_motor_cmd = nh.subscribe<motor_msg::MotorCmdStamped>("Motor/command", 1000, motor_cmd_cb);
-    core::Subscriber<motor_msg::MotorStateStamped> &sub_motor_state = nh.subscribe<motor_msg::MotorStateStamped>("Motor/state", 1000, motor_state_cb);
-    core::Subscriber<power_msg::PowerCmdStamped> &sub_power_cmd = nh.subscribe<power_msg::PowerCmdStamped>("Power/command", 1000, power_cmd_cb);
-    core::Subscriber<power_msg::PowerStateStamped> &sub_power_state = nh.subscribe<power_msg::PowerStateStamped>("Power/state", 1000, power_state_cb);
+    core::Subscriber<motor_msg::MotorCmdStamped> &sub_motor_cmd = nh.subscribe<motor_msg::MotorCmdStamped>("motor/command", 1000, motor_cmd_cb);
+    core::Subscriber<motor_msg::MotorStateStamped> &sub_motor_state = nh.subscribe<motor_msg::MotorStateStamped>("motor/state", 1000, motor_state_cb);
+    core::Subscriber<power_msg::PowerCmdStamped> &sub_power_cmd = nh.subscribe<power_msg::PowerCmdStamped>("power/command", 1000, power_cmd_cb);
+    core::Subscriber<power_msg::PowerStateStamped> &sub_power_state = nh.subscribe<power_msg::PowerStateStamped>("power/state", 1000, power_state_cb);
     
     // While forever //
     while (1)

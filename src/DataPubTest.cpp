@@ -7,10 +7,10 @@ int main() {
     // Publisher //
     core::NodeHandler nh;
     core::Rate rate(1000);
-    core::Publisher<motor_msg::MotorCmdStamped> &pub_motor_cmd = nh.advertise<motor_msg::MotorCmdStamped>("Motor/command");
-    core::Publisher<motor_msg::MotorStateStamped> &pub_motor_state = nh.advertise<motor_msg::MotorStateStamped>("Motor/state");
-    core::Publisher<power_msg::PowerCmdStamped> &pub_power_cmd = nh.advertise<power_msg::PowerCmdStamped>("Power/command");
-    core::Publisher<power_msg::PowerStateStamped> &pub_power_state = nh.advertise<power_msg::PowerStateStamped>("Power/state");
+    core::Publisher<motor_msg::MotorCmdStamped> &pub_motor_cmd = nh.advertise<motor_msg::MotorCmdStamped>("potor/command");
+    core::Publisher<motor_msg::MotorStateStamped> &pub_motor_state = nh.advertise<motor_msg::MotorStateStamped>("motor/state");
+    core::Publisher<power_msg::PowerCmdStamped> &pub_power_cmd = nh.advertise<power_msg::PowerCmdStamped>("power/command");
+    core::Publisher<power_msg::PowerStateStamped> &pub_power_state = nh.advertise<power_msg::PowerStateStamped>("power/state");
     
     // Motor & Power msg //
     motor_msg::MotorCmdStamped   motor_cmd;
