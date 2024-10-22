@@ -117,7 +117,7 @@ int main() {
         power_state.set_v_10(v);
         power_state.set_i_10(i);
         power_state.set_v_11(v);
-        power_state.set_i_11(v);
+        power_state.set_i_11(i);
         v += 0.5;
         i += 0.5;
 
