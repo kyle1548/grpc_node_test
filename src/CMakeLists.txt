@@ -14,3 +14,9 @@ target_link_libraries(CmdSubTest ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
 
 add_executable(StatePubTest StatePubTest.cpp)
 target_link_libraries(StatePubTest ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
+
+add_executable(MotorCmdSub MotorCmdSub.cpp)
+target_link_libraries(MotorCmdSub ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
+
+add_executable(PowerCmdSub PowerCmdSub.cpp)
+target_link_libraries(PowerCmdSub ${_CORE_LIBRARIES} ${GRPC_PROTO_LIB})
