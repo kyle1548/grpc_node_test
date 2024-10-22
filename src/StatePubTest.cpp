@@ -98,6 +98,7 @@ int main() {
         // Publish //
         std::cout << "MotorState message length\t" << motor_state.ByteSizeLong() << "\n";
         std::cout << "PowerState message length\t" << power_state.ByteSizeLong() << "\n";
+        std::cout << "Published at time: " << currentTime.tv_sec << "." << currentTime.tv_usec << "\n";
         pub_motor_state.publish(motor_state);
         pub_power_state.publish(power_state);
 
