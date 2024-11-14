@@ -85,13 +85,13 @@ int main() {
         // Power //
         bool digital = seq % 2 == 0;
         bool power = seq % 2 == 0;
-        int  motor_mode = seq % 5;
+        int  robot_mode = seq % 5;
         power_cmd.set_digital(digital);
         power_cmd.set_power(power);
-        power_cmd.set_motor_mode((power_msg::MOTORMODE)motor_mode);
+        power_cmd.set_robot_mode((power_msg::ROBOTMODE)robot_mode);
         power_state.set_digital(digital);
         power_state.set_power(power);
-        power_state.set_motor_mode((power_msg::MOTORMODE)motor_mode);
+        power_state.set_robot_mode((power_msg::ROBOTMODE)robot_mode);
 
         // Power V & I //
         power_state.set_v_0(v);
