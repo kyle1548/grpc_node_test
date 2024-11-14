@@ -62,10 +62,10 @@ int main() {
         // Power //
         bool digital = seq % 2 == 0;
         bool power = seq % 2 == 0;
-        int  motor_mode = seq % 5;
+        int  robot_mode = seq % 4;
         power_state.set_digital(digital);
         power_state.set_power(power);
-        power_state.set_motor_mode((power_msg::MOTORMODE)motor_mode);
+        power_state.set_robot_mode((power_msg::ROBOTMODE)robot_mode);
 
         // Power V & I //
         power_state.set_v_0(v);
@@ -96,7 +96,7 @@ int main() {
         i += 0.5;
 
         // Publish //
-        std::cout << "MotorState message length\t" << motor_state.ByteSizeLong() << "\n";
+        std::cout << "MotorState message length\t" << robot_mode.ByteSizeLong() << "\n";
         std::cout << "PowerState message length\t" << power_state.ByteSizeLong() << "\n";
         std::cout << "Published at time: " << currentTime.tv_sec << "." << currentTime.tv_usec << "\n";
         pub_motor_state.publish(motor_state);
