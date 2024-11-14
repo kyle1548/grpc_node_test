@@ -85,7 +85,7 @@ int main() {
         // Power //
         bool digital = seq % 2 == 0;
         bool power = seq % 2 == 0;
-        int  robot_mode = seq % 5;
+        int  robot_mode = seq % 4;
         power_cmd.set_digital(digital);
         power_cmd.set_power(power);
         power_cmd.set_robot_mode((power_msg::ROBOTMODE)robot_mode);
