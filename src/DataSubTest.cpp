@@ -45,7 +45,7 @@ void power_cmd_cb(power_msg::PowerCmdStamped msg) {
     std::cout << "  Time Stamp : " << msg.header().stamp().sec() << "." << msg.header().stamp().usec() << "\n";
     std::cout << "Digital: " << msg.digital() << "\n";
     std::cout << "Power  : " << msg.power() << "\n";
-    std::cout << "Mode   : " << msg.motor_mode() << "\n";
+    std::cout << "Mode   : " << msg.robot_mode() << "\n";
     std::cout << "Receive Time: " << currentTime.tv_sec << "." << currentTime.tv_usec << "\n";
     mutex_.unlock();
 }
