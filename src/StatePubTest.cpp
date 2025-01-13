@@ -27,8 +27,8 @@ int main() {
     double ki = 50.5;
     double kp = 10.6;
     double kd = 40.7;
-    double current_r = 0.7;
-    double current_l = 0.7;
+    double torque_r = 0.7;
+    double torque_l = 0.7;
     double v = 0.0;
     double i = 0.0;
 
@@ -51,13 +51,13 @@ int main() {
         for (auto& module : modules_state) {
             module->set_theta(theta);
             module->set_beta(beta);
-            module->set_current_r(current_r);
-            module->set_current_l(current_l);
+            module->set_torque_r(torque_r);
+            module->set_torque_l(torque_l);
         }
         theta += 0.1;
         beta += 0.1;
-        current_r += 0.1;
-        current_l += 0.1;
+        torque_r += 0.1;
+        torque_l += 0.1;
 
         // Power //
         bool digital = seq % 2 == 0;

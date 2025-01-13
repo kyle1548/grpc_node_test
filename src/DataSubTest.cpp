@@ -31,8 +31,8 @@ void motor_state_cb(motor_msg::MotorStateStamped msg) {
     std::cout << "Module A: " << "\n";
     std::cout << "  Theta    : " << msg.module_a().theta() << "\n";
     std::cout << "  Beta     : " << msg.module_a().beta() << "\n";
-    std::cout << "  current_r: " << msg.module_a().current_r() << "\n";
-    std::cout << "  current_l: " << msg.module_a().current_l() << "\n";
+    std::cout << "  current_r: " << msg.module_a().torque_r() << "\n";
+    std::cout << "  current_l: " << msg.module_a().torque_l() << "\n";
     std::cout << "Receive Time: " << currentTime.tv_sec << "." << currentTime.tv_usec << "\n";
     mutex_.unlock();
 }
