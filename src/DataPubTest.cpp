@@ -67,9 +67,9 @@ int main() {
         for (auto& module : modules_cmd) {
             module->set_theta(theta);
             module->set_beta(beta);
-            module->set_ki(ki);
-            module->set_kp(kp);
-            module->set_kd(kd);
+            module->set_ki_r(ki);
+            module->set_kp_r(kp);
+            module->set_kd_r(kd);
         }
         for (auto& module : modules_state) {
             module->set_theta(theta);

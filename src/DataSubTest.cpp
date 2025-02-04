@@ -14,10 +14,10 @@ void motor_cmd_cb(motor_msg::MotorCmdStamped msg) {
     std::cout << "  Time Stamp : " << msg.header().stamp().sec() << "." << msg.header().stamp().usec() << "\n";
     std::cout << "Module A: " << "\n";
     std::cout << "  Theta: " << msg.module_a().theta() << "\n";
-    std::cout << "  Beta : " << msg.module_a().beta() << "\n";
-    std::cout << "  kp   : " << msg.module_a().kp() << "\n";
-    std::cout << "  ki   : " << msg.module_a().ki() << "\n";
-    std::cout << "  kd   : " << msg.module_a().kd() << "\n";
+    std::cout << "  Beta : " << msg.module_a().beta()  << "\n";
+    std::cout << "  kp_r : " << msg.module_a().kp_r()  << "\n";
+    std::cout << "  ki_r : " << msg.module_a().ki_r()  << "\n";
+    std::cout << "  kd_r : " << msg.module_a().kd_r()  << "\n";
     std::cout << "Receive Time: " << currentTime.tv_sec << "." << currentTime.tv_usec << "\n";
     mutex_.unlock();
 }
